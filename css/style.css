@@ -198,3 +198,50 @@ header .header-footer {
     padding: 10px 15px;
     background-color: #2e2e2e;
     box-shadow: 0px 1px 2px 0px rgba(210, 217, 232, 0.4); }
+
+.stats-title {
+  font-size: 24px;
+  line-height: 50px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: #05e7e6; }
+
+.stats-subtitle {
+  font-size: 18px;
+  line-height: 50px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: #fff; }
+
+.stats-visual {
+  display: flex; }
+  .stats-visual-subject .sc-1 {
+    border-radius: 50%;
+    background: transparent;
+    border: 1px solid rgba(5, 231, 230, 0.25);
+    width: 375px;
+    height: 375px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .stats-visual-subject .sc-2 {
+    border: 1px solid rgba(5, 231, 230, 0.25);
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    position: relative; }
+  .stats-visual-subject img {
+    margin-top: 25px; }
+  .stats-visual-subject-title {
+    font-size: 36px;
+    line-height: 32px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    color: #e53663; }
+  .stats-visual-subject-subtitle {
+    font-size: 18px;
+    line-height: 32px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    color: #ffffff; }

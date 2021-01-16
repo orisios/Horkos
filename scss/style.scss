@@ -153,6 +153,7 @@
        display: flex;
        
        &-inner {
+
          background-image: 
          linear-gradient(#05e7e6, #05e7e6),
          linear-gradient(#05e7e6, #05e7e6),
@@ -321,13 +322,62 @@
 }
 
 .stats {
-  &-title {}
-  &-subtitle {}
+  &-title {
+    font-size: 24px;
+    line-height: 50px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    color: #05e7e6;
+    
+  }
+  &-subtitle {
+    font-size: 18px;
+    line-height: 50px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    color: #fff;
+  }
   &-visual {
+    display: flex;
     &-subject {
-      img {}
-      &-title {}
-      &-subtitle {}
+
+      .sc-1 {
+        border-radius: 50%;
+        background: transparent;
+        border: 1px solid rgba(5,231,230,0.25);
+        width: 375px;
+        height: 375px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .sc-2 {
+        border: 1px solid rgba(5,231,230,0.25);
+        border-radius: 50%;
+        width: 300px;
+        height: 300px;
+        position: relative;
+      }
+      
+      img {
+        margin-top: 25px;
+      }
+      &-title {
+        font-size: 36px;
+        line-height: 32px;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        color: #e53663;
+      }
+      &-subtitle {
+        font-size: 18px;
+        line-height: 32px;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        color: #ffffff;
+      }
     }
   }
 }
