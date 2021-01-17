@@ -85,16 +85,64 @@
         margin-top: -40px;
       }
     }
+
+    .button-circles {
+      align-self: center;
+      width: 92px;
+      height: 92px;
+      &:hover {
+        .circle {
+          transition: .5s;
+          transform: translate(0, 10px);
+        }
+
+        .arrow:after,
+        .arrow:before {
+          content: '';
+          position: absolute;
+          box-sizing: border-box;
+          
+          width: 100%;
+          height: 100%;
+          border-left: 2px solid  rgba(5,231,230,1);
+          border-bottom: 2px solid  rgba(5,231,230,1);
+
+
+          
+
+          animation-name: arrow;
+          animation-duration: 0.5s;
+          animation-iteration-count: infinite;
+          
+        }
+
+        @keyframes arrow {
+          0% {
+            transform: translate(0, -2px) rotate(-45deg);
+          }
+          50% {
+            transform: translate(0, 0) rotate(-45deg);
+          }
+          100% {
+            transform: translate(0, 2px) rotate(-45deg);
+          }
+        }
+
+
+      }
+
+    }
+
      .circle {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       border-radius: 50%;
       background: transparent;
       border: 1px solid rgba(5,231,230,0.25);
       width: 95px;
       height: 95px;
       margin: 0 auto;
-      display: flex;
-      justify-content: center;
-      align-items: center;
 
     }
     
@@ -116,6 +164,7 @@
         position: relative;
         width: 8px;
         height: 8px;
+        
     }
         .arrow:before,
         .arrow:after {
@@ -128,6 +177,8 @@
             border-left: 2px solid  rgba(5,231,230,1);
             border-bottom: 2px solid  rgba(5,231,230,1);
             transform: rotate(-45deg);
+
+            
           }
     }
     
@@ -245,6 +296,14 @@
         font-weight: 700;
         letter-spacing: 0.14em;
         color: #ffffff;
+        transition: 0.2s ease-in-out;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+        
+        
+        
      }
      margin-bottom: 225px;
    }
@@ -630,6 +689,11 @@
       font-weight: 700;
       letter-spacing: 0.14em;
       color: #05e7e6;
+
+      &:hover {
+        color: #e53663;
+        border-color: #e53663;
+      }
       
     }
     .side-button-active {
@@ -643,6 +707,12 @@
       letter-spacing: 0.14em;
       color: #ffffff;
       margin-left: 50px;
+      transition: 0.2s ease-in-out;
+
+      &:hover {
+        text-decoration: underline;
+        color: #fff;
+      }
     }
   }
 }
