@@ -243,8 +243,15 @@ header {
     color: #ffffff; }
   .articles-subjects {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap; }
+    justify-content: center; }
+    .articles-subjects .article-1-2 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center; }
+    .articles-subjects .article-3-4 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center; }
     .articles-subjects article {
       max-width: 258px;
       margin: 0 17px;
@@ -274,6 +281,9 @@ header {
       margin-top: 63px; }
     .articles-subjects .article-3 .article-title {
       color: #e53663; }
+    @media screen and (max-width: 1260px) {
+      .articles-subjects {
+        flex-wrap: wrap; } }
   .articles-nav-button {
     margin: -1px;
     text-decoration: none;
@@ -315,7 +325,8 @@ header {
   .stats-visual {
     display: flex;
     flex-direction: row;
-    justify-content: center; }
+    justify-content: center;
+    flex-wrap: wrap; }
     .stats-visual-subject-title {
       font-size: 36px;
       line-height: 32px;
@@ -330,7 +341,8 @@ header {
       color: #ffffff;
       margin-top: -20px; }
     .stats-visual-subject-1 {
-      margin-right: 17px; }
+      margin-right: 17px;
+      margin-bottom: 30px; }
       .stats-visual-subject-1 .sc-1 {
         border-radius: 50%;
         background: transparent;
@@ -353,9 +365,15 @@ header {
         flex-direction: column;
         justify-content: center;
         align-items: center; }
+      @media screen and (max-width: 450px) {
+        .stats-visual-subject-1 {
+          transform: scale(0.8);
+          margin-left: 15px;
+          margin-bottom: -30px; } }
     .stats-visual-subject-2 {
       margin-right: 17px;
-      margin-left: 17px; }
+      margin-left: 17px;
+      margin-bottom: 30px; }
       .stats-visual-subject-2 .sc-1 {
         border-radius: 50%;
         background: transparent;
@@ -380,6 +398,11 @@ header {
         align-items: center; }
       .stats-visual-subject-2 img {
         margin-top: 25px; }
+      @media screen and (max-width: 450px) {
+        .stats-visual-subject-2 {
+          transform: scale(0.8);
+          margin-left: 15px;
+          margin-bottom: -30px; } }
     .stats-visual-subject-3 {
       margin-left: 17px; }
       .stats-visual-subject-3 .sc-1 {
@@ -406,6 +429,10 @@ header {
         align-items: center; }
       .stats-visual-subject-3 img {
         margin-top: 25px; }
+      @media screen and (max-width: 450px) {
+        .stats-visual-subject-3 {
+          transform: scale(0.8);
+          margin-left: 15px; } }
 
 .impressions-title {
   filter: blur(0.5px);
@@ -427,13 +454,15 @@ header {
 
 .impressions .impressions-subjects {
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  flex-wrap: wrap; }
 
 .impressions-subject {
   display: flex;
   margin-right: 67px;
   margin-left: 50px;
-  margin-bottom: 70px; }
+  margin-bottom: 70px;
+  width: 477px; }
   .impressions-subject img {
     margin-right: 36px;
     margin-top: 15px;
@@ -443,7 +472,8 @@ header {
 
 .impressions .impression-name-org {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  max-height: 189px; }
   .impressions .impression-name-org .impression {
     filter: blur(0.5px);
     font-size: 17.9px;
@@ -452,10 +482,13 @@ header {
     font-style: italic;
     letter-spacing: 0.14em;
     color: #ffffff;
-    text-align: left; }
+    text-align: left;
+    max-width: 308px; }
 
 .impressions .name-org {
-  display: flex; }
+  display: flex;
+  white-space: nowrap;
+  max-width: 308px; }
   .impressions .name-org .name {
     filter: blur(0.5px);
     font-size: 17.9px;
@@ -470,6 +503,28 @@ header {
     font-weight: 400;
     letter-spacing: 0.14em;
     color: #fff; }
+
+@media screen and (max-width: 550px) {
+  .impressions {
+    transform: scale(calc(0.9));
+    margin-left: 20px; } }
+
+@media screen and (max-width: 480px) {
+  .impressions {
+    transform: scale(calc(0.8));
+    margin-left: 10px; } }
+
+@media screen and (max-width: 480px) {
+  .impressions .impressions-subject {
+    transform: scale(calc(1.2));
+    flex-direction: column;
+    align-items: center;
+    margin-left: 10px; }
+    .impressions .impressions-subject .impression {
+      text-align: center; }
+    .impressions .impressions-subject .name-org {
+      display: flex;
+      justify-content: center; } }
 
 .side-title {
   filter: blur(0.5px);

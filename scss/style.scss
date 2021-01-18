@@ -419,7 +419,18 @@
      &-subjects {
        display: flex;
        justify-content: center;
-       flex-wrap: wrap;
+
+
+      .article-1-2 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .article-3-4 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
         article {
 
           max-width: 258px;
@@ -465,7 +476,8 @@
         }
        }
 
-       @media screen and (min-width: 875px) {
+       @media screen and (max-width: 1260px) {
+         flex-wrap: wrap;
          
        }
   }
@@ -536,14 +548,15 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-
+    flex-wrap: wrap;
+    
     &-subject-title {
         font-size: 36px;
         line-height: 32px;
         font-weight: 700;
         letter-spacing: 0.14em;
         color: #e53663;
-    }
+      }
 
     &-subject-subtitle {
       font-size: 18px;
@@ -556,8 +569,9 @@
     
     &-subject-1 {
       margin-right: 17px;
-
-
+      margin-bottom: 30px;
+      
+      
       .sc-1 {
         border-radius: 50%;
         background: transparent;
@@ -568,9 +582,9 @@
         display: flex;
         justify-content: center;
         align-items: center;
-
+        
       }
-
+      
       .sc-2 {
         background-image: url(../img/stats1.png);
         background-repeat: no-repeat;
@@ -583,15 +597,21 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-
+        
       }
       
-
+      @media screen and (max-width: 450px) {
+        transform: scale(0.8);
+        margin-left: 15px;
+        margin-bottom: -30px;
+      }
     }
-
+    
     &-subject-2 {
       margin-right: 17px;
       margin-left: 17px;
+      margin-bottom: 30px;
+      
       .sc-1 {
         border-radius: 50%;
         background: transparent;
@@ -602,9 +622,9 @@
         display: flex;
         justify-content: center;
         align-items: center;
-
+        
       }
-
+      
       .sc-2 {
         background-image: url(../img/stats2.png);
         background-repeat: no-repeat;
@@ -617,15 +637,20 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-
+        
       }
       
       img {
         margin-top: 25px;
       }
-
+      @media screen and (max-width: 450px) {
+        transform: scale(0.8);
+        margin-left: 15px;
+        margin-bottom: -30px;
+      }
+      
     }
-
+    
     &-subject-3 {
       margin-left: 17px;
       .sc-1 {
@@ -638,9 +663,9 @@
         display: flex;
         justify-content: center;
         align-items: center;
-
+        
       }
-
+      
       .sc-2 {
         background-image: url(../img/stats3.png);
         background-repeat: no-repeat;
@@ -653,19 +678,23 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-
+        
       }
       
       img {
         margin-top: 25px;
       }
-
+      @media screen and (max-width: 450px) {
+        transform: scale(0.8);
+        margin-left: 15px;
+      }
+      
     }
   }
 }
 
 .impressions {
-
+  
   &-title {
     filter: blur(0.5px);
     font-size: 24px;
@@ -688,6 +717,8 @@
   .impressions-subjects {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+
   }
 
   &-subject {
@@ -695,7 +726,8 @@
     margin-right: 67px;
     margin-left: 50px;
     margin-bottom: 70px;
-
+    width: 477px;
+    
 
 
     img {
@@ -713,6 +745,7 @@
     .impression-name-org {
       display: flex;
       flex-direction: column;
+      max-height: 189px;
 
       .impression {
         filter: blur(0.5px);
@@ -723,12 +756,18 @@
         letter-spacing: 0.14em;
         color: #ffffff;
         text-align: left;
+
+        max-width: 308px;
+
       }
     }
     
 
     .name-org {
       display: flex;
+      white-space: nowrap;
+      max-width: 308px;
+
       .name {
         filter: blur(0.5px);
         font-size: 17.9px;
@@ -747,6 +786,29 @@
       }
     }
   
+    @media screen and (max-width: 550px) {
+      transform:scale(calc(0.9));
+      margin-left: 20px;
+    }
+    @media screen and (max-width: 480px) {
+      transform:scale(calc(0.8));
+      margin-left: 10px;
+    }
+    @media screen and (max-width: 480px) {
+      .impressions-subject {
+        transform:scale(calc(1.2));
+        flex-direction: column;
+        align-items: center;
+        margin-left: 10px;
+        .impression {
+          text-align: center;
+        }
+        .name-org {
+          display: flex;
+          justify-content: center;
+        }
+      }
+    }
   
 }
 
