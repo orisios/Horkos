@@ -617,6 +617,9 @@ header {
     .side-buttons .side-button:hover {
       color: #e53663;
       border-color: #e53663; }
+    @media screen and (max-width: 640px) {
+      .side-buttons .side-button {
+        margin-left: 10px; } }
   .side-buttons .side-button-active {
     text-decoration: none;
     background-color: #e53663;
@@ -635,9 +638,8 @@ header {
     @media screen and (max-width: 640px) {
       .side-buttons .side-button-active {
         margin-left: 10px; } }
-    @media screen and (max-width: 587px) {
+    @media screen and (max-width: 596px) {
       .side-buttons .side-button-active {
-        margin-left: 0;
         margin-top: 10px; } }
   @media screen and (max-width: 640px) {
     .side-buttons {
